@@ -59,6 +59,16 @@ public class WeaponSway : MonoBehaviour {
 		transform.parent.GetComponent<WeaponShoot> ().EndReloading ();
 	}
 
+    public void PlayBoltAction()
+    {
+        transform.parent.GetComponent<WeaponShoot>().PlayBoltAction();
+    }
+
+    public void EndBoltAction()
+    {
+        transform.parent.GetComponent<WeaponShoot>().EndBoltAction();
+    }
+
 	public void SetProjectileActive()
 	{
 		if(transform.parent.GetComponent<WeaponShoot>().weapon.FiresRigidbody)

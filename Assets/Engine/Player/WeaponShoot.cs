@@ -18,6 +18,7 @@ public class WeaponShoot : MonoBehaviour {
 	GravityFPSWalker gfps;
 
 	bool zooming = false;
+    bool wasZooming = false;
 	public Camera gunCam;
 	public Camera worldCam;
 	private float FOVinit;
@@ -35,7 +36,15 @@ public class WeaponShoot : MonoBehaviour {
 	private int weaponIndex = 0;
 	public Transform handHoldingWeapons;
 
-	public bool sprinting
+    [HideInInspector]
+    public bool reloading = false;
+    [HideInInspector]
+    public bool bolting = false;
+
+    bool boltActionFinish = false;
+    //returns true if we have just finished bolting, and we want to continue zooming in
+
+    public bool sprinting
 	{
 		get { return gfps.sprinting;}
 	}
@@ -69,22 +78,27 @@ public class WeaponShoot : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
 	{
-		if(Input.GetKey(KeyCode.R))
+		if(Input.GetKey(KeyCode.R) && !animator.GetBool("Reloading") && !animator.GetBool("BoltAction"))
 		{
 			if(weapon.ammoStockpile > 0 && weapon.currentClip != weapon.ClipSize)
 				StartReloading();
 		}
-		if(Input.GetMouseButtonDown(1))
+		if(Input.GetMouseButtonDown(1) || (boltActionFinish && wasZooming && !zooming))
 		{
-			zooming = !zooming;
-			reticle.gameObject.active = !zooming;
-			if(!zooming && weapon.GUIZoom)
-			{
-				weapon.GUIZoomImage.gameObject.active = false;
-				weapon.SetVisible(true);
-				this.transform.GetChild(0).GetChild(1).GetComponent<SkinnedMeshRenderer>().enabled = true;
-			}
-			gfps.SetZooming(zooming);
+            //if youre not currently in the bolt action or reload animation
+            if (!animator.GetBool("Reloading") && !animator.GetBool("BoltAction"))
+            {
+                zooming = !zooming;
+                reticle.gameObject.active = !zooming;
+                gfps.SetZooming(zooming);
+
+                //for snipers / texture-based zoomed in weapons
+                if (!zooming && weapon.GUIZoom)
+                {
+                    TurnSniperGUI(false);
+                }
+                else boltActionFinish = false;
+            }
 		}
 
 		CheckChangeWeapons ();
@@ -119,11 +133,11 @@ public class WeaponShoot : MonoBehaviour {
 		{
 			if (Input.GetMouseButtonDown(0)) 
 			{
-				if(weapon.currentClip > 0 && !reloading)
+				if(weapon.currentClip > 0 && !reloading && !bolting)
 					FireBullet ();
-				else if (weapon.ammoStockpile > 0)
+				else if (weapon.ammoStockpile > 0 && !bolting)
 					StartReloading();
-				else if(!outOfAmmoPlayed)
+				else if(!outOfAmmoPlayed && !bolting)
 				{
 					outOfAmmoPlayed = true;
 					myCameraAudioSource.clip = outOfAmmoPhrases [Random.Range (0, outOfAmmoPhrases.Length)];
@@ -158,9 +172,7 @@ public class WeaponShoot : MonoBehaviour {
 			//for snipers
 			if(weapon.GUIZoom && gunCam.fieldOfView <= weapon.FOVzoom + 2.5f)
 			{
-				weapon.GUIZoomImage.gameObject.active = true;
-				weapon.SetVisible(false);
-				this.transform.GetChild(0).GetChild(1).GetComponent<SkinnedMeshRenderer>().enabled = false;
+                TurnSniperGUI(true);
 			}
 		}
 		else
@@ -175,8 +187,6 @@ public class WeaponShoot : MonoBehaviour {
 		Pick ();
 	}
 
-	[HideInInspector]
-	public bool reloading = false;
 	public void EndReloading()
 	{
 		reloading = false;
@@ -194,6 +204,24 @@ public class WeaponShoot : MonoBehaviour {
 			weapon.currentClip = weapon.ammoStockpile;
 			weapon.ammoStockpile = 0;
 		}
+
+        if(weapon.BoltAction)
+        {
+            StartBoltAction();
+        }
+        else
+        {
+            //if we were zooming in, lets zoom back in
+            if(wasZooming && !zooming)
+            {
+                zooming = true;
+                reticle.gameObject.active = !zooming;
+                gfps.SetZooming(zooming);
+
+                if (weapon.GUIZoom)
+                    TurnSniperGUI(true);
+            }
+        }
 	}
 	
 	void Pick()
@@ -222,6 +250,23 @@ public class WeaponShoot : MonoBehaviour {
 		}
 	}
 
+    public void StartBoltAction()
+    {
+        if(!bolting)
+        {
+            animator.SetBool("BoltAction", true);
+            bolting = true;
+            wasZooming = zooming;
+            if(wasZooming)
+            {
+                zooming = false;
+
+                if (weapon.GUIZoom)
+                    TurnSniperGUI(false);
+            }
+        }
+    }
+
 	public void StartReloading()
 	{
 		if(!reloading)
@@ -230,7 +275,15 @@ public class WeaponShoot : MonoBehaviour {
 			animator.SetBool ("Reloading", true);
 			myCameraAudioSource.clip = reloadingPhrases [Random.Range (0, reloadingPhrases.Length)];
 			myCameraAudioSource.Play ();
-		}
+            wasZooming = zooming;
+            if (wasZooming)
+            {
+                zooming = false;
+
+                if(weapon.GUIZoom)
+                    TurnSniperGUI(false);
+            }
+        }
 	}
 
 	public void PlayClipOut()
@@ -245,7 +298,33 @@ public class WeaponShoot : MonoBehaviour {
 		myAudioSource.Play ();
 	}
 
-	void CheckChangeWeapons()
+    public void PlayBoltAction()
+    {
+        if (weapon.BoltAction)
+        {
+            myAudioSource.clip = weapon.BoltNoise;
+            myAudioSource.Play();
+        }
+    }
+
+    public void EndBoltAction()
+    {
+        if (weapon.BoltAction)
+        {
+            bolting = false;
+            animator.SetBool("BoltAction", false);
+            boltActionFinish = true;
+        }
+    }
+
+    void TurnSniperGUI(bool on)
+    {
+        weapon.GUIZoomImage.gameObject.active = on;
+        weapon.SetVisible(!on);
+        this.transform.GetChild(0).GetChild(1).GetComponent<SkinnedMeshRenderer>().enabled = !on;
+    }
+
+    void CheckChangeWeapons()
 	{
 		float d = Input.GetAxis("Mouse ScrollWheel");
 		if (d > 0f)
@@ -369,9 +448,11 @@ public class WeaponShoot : MonoBehaviour {
 			}
 		}
 
-		//check if we should / can reload
-		if (weapon.currentClip == 0 && weapon.ammoStockpile > 0)
-			StartReloading();
+        //check if we should / can reload
+        if (weapon.currentClip == 0 && weapon.ammoStockpile > 0)
+            StartReloading();
+        else if (weapon.currentClip > 0 && weapon.BoltAction)
+            StartBoltAction();
 	}
 
 	void FixedUpdate()

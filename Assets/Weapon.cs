@@ -24,6 +24,8 @@ public class Weapon : MonoBehaviour {
 	public bool FiresRigidbody = false;
 	public bool GUIZoom = false;
 	public Image GUIZoomImage;
+    public bool BoltAction = false;
+    public AudioClip BoltNoise;
 
 	//displaying clip info on GUI
 	private int _currentClip;
