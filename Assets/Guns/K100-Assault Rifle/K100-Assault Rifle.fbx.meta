@@ -1,0 +1,128 @@
+fileFormatVersion: 2
+guid: d05e4a395567ea142948da22cde8e276
+timeCreated: 1481971738
+licenseType: Free
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: Barrel
+    100002: Bolt
+    100004: Grip
+    100006: Handle
+    100008: Iron_Sight
+    100010: //RootNode
+    100012: Mag
+    100014: Rail_Guard
+    100016: Receiver
+    100018: Red_Dot_Sight
+    100020: Stock
+    100022: Trigger
+    400000: Barrel
+    400002: Bolt
+    400004: Grip
+    400006: Handle
+    400008: Iron_Sight
+    400010: //RootNode
+    400012: Mag
+    400014: Rail_Guard
+    400016: Receiver
+    400018: Red_Dot_Sight
+    400020: Stock
+    400022: Trigger
+    2300000: Barrel
+    2300002: Bolt
+    2300004: Grip
+    2300006: Handle
+    2300008: Iron_Sight
+    2300010: Mag
+    2300012: Rail_Guard
+    2300014: Receiver
+    2300016: Red_Dot_Sight
+    2300018: Stock
+    2300020: Trigger
+    3300000: Barrel
+    3300002: Bolt
+    3300004: Grip
+    3300006: Handle
+    3300008: Iron_Sight
+    3300010: Mag
+    3300012: Rail_Guard
+    3300014: Receiver
+    3300016: Red_Dot_Sight
+    3300018: Stock
+    3300020: Trigger
+    4300000: Barrel
+    4300002: Receiver
+    4300004: Mag
+    4300006: Rail_Guard
+    4300008: Stock
+    4300010: Handle
+    4300012: Bolt
+    4300014: Trigger
+    4300016: Iron_Sight
+    4300018: Red_Dot_Sight
+    4300020: Grip
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
