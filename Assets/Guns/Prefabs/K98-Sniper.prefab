@@ -289,9 +289,9 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1777479718475718}
-  m_LocalRotation: {x: -0.09463553, y: -0.9374218, z: -0.2876353, w: -0.17190266}
-  m_LocalPosition: {x: 0.007814, y: 0.012377, z: -0.0061109}
-  m_LocalScale: {x: 0.04614979, y: 0.04614981, z: 0.046149857}
+  m_LocalRotation: {x: -0.17852214, y: 0.96731853, z: 0.17875761, w: -0.021693148}
+  m_LocalPosition: {x: 0.007814004, y: 0.012377004, z: -0.006110903}
+  m_LocalScale: {x: 0.046149835, y: 0.04614979, z: 0.046149883}
   m_Children:
   - {fileID: 4204048152074104}
   - {fileID: 4588389968054356}
@@ -310,7 +310,7 @@ Transform:
   - {fileID: 4133772642572684}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
 --- !u!4 &4021205819435180
 Transform:
   m_ObjectHideFlags: 1
@@ -706,7 +706,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 55e1ddef7af680048a2e6eb5f402e6b2, type: 2}
+  - {fileID: 2100000, guid: af40d33b84ee5d84d8a3af7123156cca, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1166,9 +1166,9 @@ MonoBehaviour:
   maxAmmo: 0
   FireRateReset: 0
   whichWeapon: {fileID: 0}
-  translateOffset: {x: 0, y: 0, z: 0}
-  rotationOffset: {x: 0, y: 0, z: 0}
-  scaleOffset: {x: 0, y: 0, z: 0}
+  translateOffset: {x: -0.01473, y: -0.00119, z: -0.00196}
+  rotationOffset: {x: -20.59, y: -180.813, z: -16.921}
+  scaleOffset: {x: 0.04614983, y: 0.04614983, z: 0.04614983}
 --- !u!114 &114943324489454046
 MonoBehaviour:
   m_ObjectHideFlags: 1

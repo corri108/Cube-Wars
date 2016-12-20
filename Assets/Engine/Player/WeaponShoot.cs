@@ -68,15 +68,15 @@ public class WeaponShoot : MonoBehaviour {
         {
             weaponList = new List<Weapon>();
         }
-		foreach(var w in weaponList)
-		{
-            if(w != null)
+        foreach (var w in weaponList)
+        {
+            if (w != null)
             {
                 w.gameObject.SetActive(false);
             }
         }
         weaponIndex = 0;
-        weaponList[weaponIndex].gameObject.SetActive(true);
+        //weaponList[weaponIndex].gameObject.SetActive(true);
 		ChangeWeapon ();
 	}
 	
@@ -252,6 +252,10 @@ public class WeaponShoot : MonoBehaviour {
                 }
                 else if (ri.GetComponent<Weapon>() != null)
                 {
+                    if (ri.GetComponent<Weapon>() == this.weapon)
+                    {
+                        return;
+                    }
                     ri.GetComponent<Weapon>().SetWeaponShootOwner(this);
                 }
 
@@ -374,7 +378,7 @@ public class WeaponShoot : MonoBehaviour {
 	void ChangeWeapon ()
 	{
         // don't allow weapon changes while reloading.
-        if(reloading || bolting)
+        if(reloading || bolting || weaponList.Count <= 0)
         {
             return;
         }
@@ -388,14 +392,17 @@ public class WeaponShoot : MonoBehaviour {
         }
 		//change the weapons now
 		this.weapon = weaponList [weaponIndex];
-        //tell animator to switch
-        animator.SetInteger("WeaponIndex", (int)weapon.weaponType);
-        //turn stuff on of new one
-        this.weapon.gameObject.active = true;
-		this.weapon.GetComponent<AudioSource> ().enabled = true;
-		this.weapon.enabled = true;
-		//reset the GUI so its for this weapon now
-		this.weapon.SetGUI ();
+        if(weapon != null)
+        {
+            //tell animator to switch
+            animator.SetInteger("WeaponIndex", (int)weapon.weaponType);
+            //turn stuff on of new one
+            this.weapon.gameObject.active = true;
+            this.weapon.GetComponent<AudioSource>().enabled = true;
+            this.weapon.enabled = true;
+            //reset the GUI so its for this weapon now
+            this.weapon.SetGUI();
+        }
 	}
 
 	void FireBullet ()
