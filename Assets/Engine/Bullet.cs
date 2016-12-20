@@ -3,10 +3,16 @@ using System.Collections;
 
 public class Bullet : MonoBehaviour 
 {
-	Vector3 velocity;
-	Vector3 startPos;
-	Vector3 endPos;
-	LineRenderer line;
+    [HideInInspector]
+	public Vector3 velocity;
+    [HideInInspector]
+    public Vector3 startPos;
+    [HideInInspector]
+    public Vector3 endPos;
+    [HideInInspector]
+	public LineRenderer line;
+
+    //non hidden
 	public int type = 0;
 	// Use this for initialization
 	void Start () 
@@ -46,6 +52,26 @@ public class Bullet : MonoBehaviour
 			line.SetPosition(0, start);
 			line.SetPosition(1, end);
 		}
+        else if(type == 2)
+        {
+            line.material = new Material(Shader.Find("Particles/Alpha Blended Premultiply"));
+            line.SetColors(Color.red, Color.yellow);
+            end += velocity * 4f;
+            line.SetWidth(0.1f, 0.1f);
+            line.SetPosition(0, start);
+            line.SetPosition(1, end);
+
+            for(int i = 0; i < 8; ++i)
+            {
+                GameObject bul = (GameObject)GameObject.Instantiate(this.gameObject, this.transform.position, this.transform.rotation);
+                Bullet b = bul.GetComponent<Bullet>();
+                b.line.material = line.material;
+                b.line.SetColors(Color.red, Color.yellow);
+                b.line.SetWidth(.1f, .1f);
+                b.line.SetPosition(0, start);
+                b.line.SetPosition(1, end + this.transform.right * Random.Range(-1f, 1f) + this.transform.up * Random.Range(-1f, 1f));
+            }
+        }
 
 		startPos = start;
 		endPos = end;

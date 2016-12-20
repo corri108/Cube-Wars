@@ -57,7 +57,9 @@ public class Weapon : MonoBehaviour {
         Sniper,
         Assault,
         RocketLauncher,
-        MachineGun
+        MachineGun,
+        Shotgun,
+        Pistol
     }
 	
 	public int ammoStockpile
