@@ -1,6 +1,7 @@
 ﻿
 using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine.UI;
 
 public class WeaponShoot : MonoBehaviour {
@@ -30,9 +31,9 @@ public class WeaponShoot : MonoBehaviour {
 	int outOfAmmoTimer = 60 * 6;
 	int outOfAmmoReset = 60 * 6;
 	bool outOfAmmoPlayed = false;
-
-	[HideInInspector]
-	public Weapon[] weaponList;
+    
+	public List<Weapon> weaponList;
+    public uint maxPrimaryWeapons = 4;
 	private int weaponIndex = 0;
 	public Transform handHoldingWeapons;
 
@@ -62,16 +63,20 @@ public class WeaponShoot : MonoBehaviour {
 		myAudioSource = GetComponent<AudioSource> ();
 		myCameraAudioSource = transform.parent.GetComponent<AudioSource> ();
 
-		//weapon list
-		weaponList = handHoldingWeapons.GetComponentsInChildren<Weapon> ();
-
+        //Hide all weapons that are not the starting one.
+        if(weaponList == null)
+        {
+            weaponList = new List<Weapon>();
+        }
 		foreach(var w in weaponList)
 		{
-			w.gameObject.active = false;
-		}
-
-		weaponList [0].gameObject.active = true;
-		weaponIndex = 0;
+            if(w != null)
+            {
+                w.gameObject.SetActive(false);
+            }
+        }
+        weaponIndex = 0;
+        weaponList[weaponIndex].gameObject.SetActive(true);
 		ChangeWeapon ();
 	}
 	
@@ -223,6 +228,11 @@ public class WeaponShoot : MonoBehaviour {
             }
         }
 	}
+
+    void AddWeapon(Weapon weapon)
+    {
+        Debug.Log("added weapon");
+    }
 	
 	void Pick()
 	{
@@ -236,10 +246,16 @@ public class WeaponShoot : MonoBehaviour {
 			Pickable ri = rh.collider.gameObject.GetComponent<Pickable>();
 			if(ri != null)
 			{
-				if(ri.GetComponent<AmmoBox>() != null)
-					ri.GetComponent<AmmoBox>().SetHowMuch(weapon.maxAmmo - weapon.ammoStockpile, this);
+                if (ri.GetComponent<AmmoBox>() != null)
+                {
+                    ri.GetComponent<AmmoBox>().SetHowMuch(weapon.maxAmmo - weapon.ammoStockpile, this);
+                }
+                else if (ri.GetComponent<Weapon>() != null)
+                {
+                    ri.GetComponent<Weapon>().SetWeaponShootOwner(this);
+                }
 
-				ri.OnHover.Invoke();
+                ri.OnHover.Invoke();
 				interaction.text = ri.pickText;
 
 				if(Input.GetKeyDown(KeyCode.E))
@@ -324,13 +340,23 @@ public class WeaponShoot : MonoBehaviour {
         this.transform.GetChild(0).GetChild(1).GetComponent<SkinnedMeshRenderer>().enabled = !on;
     }
 
+    public void EquipWeapon(Weapon weapon, Vector3 translateOffset, Vector3 rotOffset, Vector3 scaleOffset)
+    {
+        weaponList.Add(weapon);
+        weapon.transform.SetParent(handHoldingWeapons.transform);
+        weapon.transform.localPosition = translateOffset;
+        weapon.transform.localRotation = Quaternion.Euler(rotOffset.x, rotOffset.y, rotOffset.z);
+        weapon.transform.localScale = scaleOffset;
+        weapon.gameObject.SetActive(false);
+    }
+
     void CheckChangeWeapons()
 	{
 		float d = Input.GetAxis("Mouse ScrollWheel");
 		if (d > 0f)
 		{
 			// scroll up
-			if(weaponIndex == weaponList.Length - 1)
+			if(weaponIndex == weaponList.Count - 1)
 				weaponIndex = 0;
 			else weaponIndex++;
 		}
@@ -338,7 +364,7 @@ public class WeaponShoot : MonoBehaviour {
 		{
 			// scroll down
 			if(weaponIndex == 0)
-				weaponIndex = weaponList.Length - 1;
+				weaponIndex = (int)weaponList.Count - 1;
 			else 	weaponIndex--;
 		}
 
@@ -353,16 +379,19 @@ public class WeaponShoot : MonoBehaviour {
             return;
         }
 
-		//tell animator to switch
-		animator.SetInteger ("WeaponIndex", weaponIndex);
 		//turn shit off of old one
-		this.weapon.gameObject.active = false;
-		this.weapon.GetComponent<AudioSource> ().enabled = false;
-		this.weapon.enabled = false;
+        if(weapon != null)
+        {
+            this.weapon.gameObject.active = false;
+            this.weapon.GetComponent<AudioSource>().enabled = false;
+            this.weapon.enabled = false;
+        }
 		//change the weapons now
 		this.weapon = weaponList [weaponIndex];
-		//turn stuff on of new one
-		this.weapon.gameObject.active = true;
+        //tell animator to switch
+        animator.SetInteger("WeaponIndex", (int)weapon.weaponType);
+        //turn stuff on of new one
+        this.weapon.gameObject.active = true;
 		this.weapon.GetComponent<AudioSource> ().enabled = true;
 		this.weapon.enabled = true;
 		//reset the GUI so its for this weapon now
