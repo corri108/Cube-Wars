@@ -347,6 +347,12 @@ public class WeaponShoot : MonoBehaviour {
 
 	void ChangeWeapon ()
 	{
+        // don't allow weapon changes while reloading.
+        if(reloading || bolting)
+        {
+            return;
+        }
+
 		//tell animator to switch
 		animator.SetInteger ("WeaponIndex", weaponIndex);
 		//turn shit off of old one
