@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine.UI;
 
 [RequireComponent(typeof(Pickable))]
+[RequireComponent(typeof(AudioSource))]
 public class Weapon : MonoBehaviour {
 
 	//weapon zooming props

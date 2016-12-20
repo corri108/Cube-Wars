@@ -2,6 +2,7 @@
 using System.Collections;
 using UnityEngine.Events;
 
+[RequireComponent(typeof(BoxCollider))]
 public class Pickable : MonoBehaviour {
 
 	public string pickText;
