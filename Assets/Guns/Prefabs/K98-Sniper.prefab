@@ -289,9 +289,9 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1777479718475718}
-  m_LocalRotation: {x: -0.17852214, y: 0.96731853, z: 0.17875761, w: -0.021693148}
-  m_LocalPosition: {x: 0.007814004, y: 0.012377004, z: -0.006110903}
-  m_LocalScale: {x: 0.046149835, y: 0.04614979, z: 0.046149883}
+  m_LocalRotation: {x: 0.0000007152557, y: -0.70710605, z: -0.00000086426724, w: 0.70710754}
+  m_LocalPosition: {x: 8.160002, y: 2.5494323, z: -9.237577}
+  m_LocalScale: {x: 4.2723494, y: 4.2723308, z: 4.2723527}
   m_Children:
   - {fileID: 4204048152074104}
   - {fileID: 4588389968054356}
@@ -310,7 +310,7 @@ Transform:
   - {fileID: 4133772642572684}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+  m_LocalEulerAnglesHint: {x: -19.76, y: -173.54501, z: -22.038}
 --- !u!4 &4021205819435180
 Transform:
   m_ObjectHideFlags: 1
@@ -1183,11 +1183,33 @@ MonoBehaviour:
   pickText: 
   OnPick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 114145580589265484}
+        m_MethodName: OnPickUp
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
   OnHover:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 114145580589265484}
+        m_MethodName: OnHover
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null

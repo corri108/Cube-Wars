@@ -108,52 +108,55 @@ public class WeaponShoot : MonoBehaviour {
 
 		CheckChangeWeapons ();
 
-		if(weapon.Automatic)
-		{
-			if (Input.GetMouseButton (0)) 
-			{
-				isFiring = true;
-				weapon.FireRate -= Time.deltaTime;
+        if(weapon != null)
+        {
+            if (weapon.Automatic)
+            {
+                if (Input.GetMouseButton(0))
+                {
+                    isFiring = true;
+                    weapon.FireRate -= Time.deltaTime;
 
-				if(weapon.FireRate < 0)
-				{
-					if(weapon.currentClip > 0 && !reloading)
-						FireBullet ();
-					else if (weapon.ammoStockpile > 0)
-						StartReloading();
-					else if(!outOfAmmoPlayed)
-					{
-						outOfAmmoPlayed = true;
-						myCameraAudioSource.clip = outOfAmmoPhrases [Random.Range (0, outOfAmmoPhrases.Length)];
-						myCameraAudioSource.Play ();
-					}
-				} 
-			}
-			else
-			{
-				isFiring = false;
-			}
-		}
-		else
-		{
-			if (Input.GetMouseButtonDown(0)) 
-			{
-				if(weapon.currentClip > 0 && !reloading && !bolting)
-					FireBullet ();
-				else if (weapon.ammoStockpile > 0 && !bolting)
-					StartReloading();
-				else if(!outOfAmmoPlayed && !bolting)
-				{
-					outOfAmmoPlayed = true;
-					myCameraAudioSource.clip = outOfAmmoPhrases [Random.Range (0, outOfAmmoPhrases.Length)];
-					myCameraAudioSource.Play ();
-				}
-			}
-			else
-			{
-				isFiring = false;
-			}
-		}
+                    if (weapon.FireRate < 0)
+                    {
+                        if (weapon.currentClip > 0 && !reloading)
+                            FireBullet();
+                        else if (weapon.ammoStockpile > 0)
+                            StartReloading();
+                        else if (!outOfAmmoPlayed)
+                        {
+                            outOfAmmoPlayed = true;
+                            myCameraAudioSource.clip = outOfAmmoPhrases[Random.Range(0, outOfAmmoPhrases.Length)];
+                            myCameraAudioSource.Play();
+                        }
+                    }
+                }
+                else
+                {
+                    isFiring = false;
+                }
+            }
+            else
+            {
+                if (Input.GetMouseButtonDown(0))
+                {
+                    if (weapon.currentClip > 0 && !reloading && !bolting)
+                        FireBullet();
+                    else if (weapon.ammoStockpile > 0 && !bolting)
+                        StartReloading();
+                    else if (!outOfAmmoPlayed && !bolting)
+                    {
+                        outOfAmmoPlayed = true;
+                        myCameraAudioSource.clip = outOfAmmoPhrases[Random.Range(0, outOfAmmoPhrases.Length)];
+                        myCameraAudioSource.Play();
+                    }
+                }
+                else
+                {
+                    isFiring = false;
+                }
+            }
+        }
 		if(Input.GetMouseButtonUp(0))
 		{
 			weapon.FireRate = 0;
@@ -347,7 +350,7 @@ public class WeaponShoot : MonoBehaviour {
     public void EquipWeapon(Weapon weapon, Vector3 translateOffset, Vector3 rotOffset, Vector3 scaleOffset)
     {
         weaponList.Add(weapon);
-        weapon.transform.SetParent(handHoldingWeapons.transform);
+        weapon.transform.SetParent(handHoldingWeapons.transform, true);
         weapon.transform.localPosition = translateOffset;
         weapon.transform.localRotation = Quaternion.Euler(rotOffset.x, rotOffset.y, rotOffset.z);
         weapon.transform.localScale = scaleOffset;
