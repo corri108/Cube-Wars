@@ -1,0 +1,550 @@
+fileFormatVersion: 2
+guid: 5db901f50e2bdb942860d4caad61e59a
+timeCreated: 1482454467
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: ChamferBox001
+    100002: ChamferBox002
+    100004: ChamferCyl001
+    100006: ChamferCyl002
+    100008: Cylinder001
+    100010: Cylinder002
+    100012: Cylinder003
+    100014: Cylinder004
+    100016: Cylinder005
+    100018: Cylinder006
+    100020: Cylinder007
+    100022: Cylinder008
+    100024: Cylinder009
+    100026: Cylinder010
+    100028: Cylinder011
+    100030: Cylinder012
+    100032: Cylinder013
+    100034: Cylinder014
+    100036: Cylinder015
+    100038: Cylinder016
+    100040: Cylinder017
+    100042: Cylinder018
+    100044: Cylinder019
+    100046: Cylinder020
+    100048: Cylinder021
+    100050: Cylinder022
+    100052: Cylinder023
+    100054: Cylinder024
+    100056: Cylinder026
+    100058: Cylinder027
+    100060: Cylinder028
+    100062: Cylinder029
+    100064: Cylinder030
+    100066: Cylinder031
+    100068: Hands
+    100070: Hands001
+    100072: LegL
+    100074: NeckAttach002
+    100076: NeckAttach003
+    100078: NeckAttach004
+    100080: OtherArm
+    100082: OtherArm001
+    100084: //RootNode
+    100086: Screen
+    100088: Sphere001
+    100090: Sphere002
+    400000: ChamferBox001
+    400002: ChamferBox002
+    400004: ChamferCyl001
+    400006: ChamferCyl002
+    400008: Cylinder001
+    400010: Cylinder002
+    400012: Cylinder003
+    400014: Cylinder004
+    400016: Cylinder005
+    400018: Cylinder006
+    400020: Cylinder007
+    400022: Cylinder008
+    400024: Cylinder009
+    400026: Cylinder010
+    400028: Cylinder011
+    400030: Cylinder012
+    400032: Cylinder013
+    400034: Cylinder014
+    400036: Cylinder015
+    400038: Cylinder016
+    400040: Cylinder017
+    400042: Cylinder018
+    400044: Cylinder019
+    400046: Cylinder020
+    400048: Cylinder021
+    400050: Cylinder022
+    400052: Cylinder023
+    400054: Cylinder024
+    400056: Cylinder026
+    400058: Cylinder027
+    400060: Cylinder028
+    400062: Cylinder029
+    400064: Cylinder030
+    400066: Cylinder031
+    400068: Hands
+    400070: Hands001
+    400072: LegL
+    400074: NeckAttach002
+    400076: NeckAttach003
+    400078: NeckAttach004
+    400080: OtherArm
+    400082: OtherArm001
+    400084: //RootNode
+    400086: Screen
+    400088: Sphere001
+    400090: Sphere002
+    2300000: ChamferBox001
+    2300002: ChamferBox002
+    2300004: ChamferCyl001
+    2300006: ChamferCyl002
+    2300008: Cylinder001
+    2300010: Cylinder002
+    2300012: Cylinder003
+    2300014: Cylinder004
+    2300016: Cylinder005
+    2300018: Cylinder006
+    2300020: Cylinder007
+    2300022: Cylinder008
+    2300024: Cylinder009
+    2300026: Cylinder010
+    2300028: Cylinder011
+    2300030: Cylinder012
+    2300032: Cylinder013
+    2300034: Cylinder014
+    2300036: Cylinder015
+    2300038: Cylinder016
+    2300040: Cylinder017
+    2300042: Cylinder018
+    2300044: Cylinder019
+    2300046: Cylinder020
+    2300048: Cylinder021
+    2300050: Cylinder022
+    2300052: Cylinder023
+    2300054: Cylinder024
+    2300056: Cylinder026
+    2300058: Cylinder027
+    2300060: Cylinder028
+    2300062: Cylinder029
+    2300064: Cylinder030
+    2300066: Cylinder031
+    2300068: Hands
+    2300070: Hands001
+    2300072: LegL
+    2300074: NeckAttach002
+    2300076: NeckAttach003
+    2300078: NeckAttach004
+    2300080: OtherArm
+    2300082: OtherArm001
+    2300084: Screen
+    2300086: Sphere001
+    2300088: Sphere002
+    3300000: ChamferBox001
+    3300002: ChamferBox002
+    3300004: ChamferCyl001
+    3300006: ChamferCyl002
+    3300008: Cylinder001
+    3300010: Cylinder002
+    3300012: Cylinder003
+    3300014: Cylinder004
+    3300016: Cylinder005
+    3300018: Cylinder006
+    3300020: Cylinder007
+    3300022: Cylinder008
+    3300024: Cylinder009
+    3300026: Cylinder010
+    3300028: Cylinder011
+    3300030: Cylinder012
+    3300032: Cylinder013
+    3300034: Cylinder014
+    3300036: Cylinder015
+    3300038: Cylinder016
+    3300040: Cylinder017
+    3300042: Cylinder018
+    3300044: Cylinder019
+    3300046: Cylinder020
+    3300048: Cylinder021
+    3300050: Cylinder022
+    3300052: Cylinder023
+    3300054: Cylinder024
+    3300056: Cylinder026
+    3300058: Cylinder027
+    3300060: Cylinder028
+    3300062: Cylinder029
+    3300064: Cylinder030
+    3300066: Cylinder031
+    3300068: Hands
+    3300070: Hands001
+    3300072: LegL
+    3300074: NeckAttach002
+    3300076: NeckAttach003
+    3300078: NeckAttach004
+    3300080: OtherArm
+    3300082: OtherArm001
+    3300084: Screen
+    3300086: Sphere001
+    3300088: Sphere002
+    4300000: Cylinder001
+    4300002: ChamferBox001
+    4300004: NeckAttach002
+    4300006: NeckAttach003
+    4300008: ChamferBox002
+    4300010: Cylinder002
+    4300012: Cylinder003
+    4300014: ChamferCyl001
+    4300016: Cylinder004
+    4300018: Hands
+    4300020: Cylinder005
+    4300022: Cylinder006
+    4300024: Cylinder007
+    4300026: Cylinder008
+    4300028: Cylinder009
+    4300030: Cylinder010
+    4300032: OtherArm
+    4300034: Cylinder011
+    4300036: ChamferCyl002
+    4300038: Cylinder012
+    4300040: Cylinder013
+    4300042: Cylinder014
+    4300044: Cylinder015
+    4300046: Cylinder016
+    4300048: Cylinder017
+    4300050: Hands001
+    4300052: Cylinder018
+    4300054: Cylinder019
+    4300056: Screen
+    4300058: NeckAttach004
+    4300060: OtherArm001
+    4300062: Cylinder020
+    4300064: Cylinder021
+    4300066: Cylinder022
+    4300068: Cylinder023
+    4300070: Cylinder024
+    4300072: LegL
+    4300074: Cylinder026
+    4300076: Cylinder027
+    4300078: Cylinder028
+    4300080: Cylinder029
+    4300082: Sphere001
+    4300084: Sphere002
+    4300086: Cylinder030
+    4300088: Cylinder031
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: "Invalid Avatar Rig Configuration. Missing or invalid transform:\n\tRequired
+      human bone 'LeftUpperLeg' not found\n"
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human:
+    - boneName: ChamferBox002
+      humanName: Hips
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: ChamferBox001
+      humanName: Spine
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    skeleton:
+    - name: Roboty(Clone)
+      parentName: 
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: ChamferBox001
+      parentName: Roboty(Clone)
+      position: {x: -0, y: 2.5977697, z: 0}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: ChamferBox002
+      parentName: Roboty(Clone)
+      position: {x: -0, y: 2.0088885, z: 0}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 0.66179574, y: 0.80483335, z: 0.3978025}
+    - name: ChamferCyl001
+      parentName: Roboty(Clone)
+      position: {x: 0.9133332, y: 2.7762828, z: 0.0023875998}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 0.55203694, y: 0.6643366, z: 0.38982862}
+    - name: ChamferCyl002
+      parentName: Roboty(Clone)
+      position: {x: -0.9027286, y: 2.7762828, z: 0.0023875998}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: -0.55203694, y: -0.6643366, z: -0.38982862}
+    - name: Cylinder001
+      parentName: Roboty(Clone)
+      position: {x: -0, y: 3.840466, z: 0}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 0.82175225}
+    - name: Cylinder002
+      parentName: Roboty(Clone)
+      position: {x: 0.91332465, y: 3.326529, z: 0.002388517}
+      rotation: {x: 0.000000021855694, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Cylinder003
+      parentName: Roboty(Clone)
+      position: {x: 0.9133332, y: 2.7893472, z: 0.0023875965}
+      rotation: {x: 0.000000015454312, y: -0.7071068, z: 0.000000015454312, w: 0.7071068}
+      scale: {x: 0.5458366, y: 0.5458366, z: 0.5458366}
+    - name: Cylinder004
+      parentName: Roboty(Clone)
+      position: {x: 0.9133332, y: 2.086099, z: 0.0023875965}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 0.7616999, y: 0.7616999, z: 1}
+    - name: Cylinder005
+      parentName: Roboty(Clone)
+      position: {x: 0.8872802, y: 1.5380112, z: 0.0035770875}
+      rotation: {x: 0.7071068, y: 0, z: 0, w: 0.70710677}
+      scale: {x: 0.61970323, y: 0.61970323, z: 0.8185755}
+    - name: Cylinder006
+      parentName: Roboty(Clone)
+      position: {x: 0.8035688, y: 1.5422628, z: 0.0035770875}
+      rotation: {x: 0.7062058, y: -0.03568725, z: -0.03568724, w: 0.70620555}
+      scale: {x: 0.6200285, y: 0.61970323, z: 0.81814635}
+    - name: Cylinder007
+      parentName: Roboty(Clone)
+      position: {x: 1.022972, y: 1.5471069, z: 0.0035770875}
+      rotation: {x: 0.7035231, y: 0.07110167, z: 0.07110166, w: 0.70352286}
+      scale: {x: 0.6210025, y: 0.61970323, z: 0.8168627}
+    - name: Cylinder008
+      parentName: Roboty(Clone)
+      position: {x: 0.9535219, y: 1.5380112, z: 0.0035770875}
+      rotation: {x: 0.7062058, y: 0.03568725, z: 0.03568724, w: 0.70620555}
+      scale: {x: 0.6200285, y: 0.61970323, z: 0.81814635}
+    - name: Cylinder009
+      parentName: Roboty(Clone)
+      position: {x: 1.050392, y: 1.7204547, z: 0.0035769625}
+      rotation: {x: 0.7381851, y: 0.27692163, z: 0.2030942, w: 0.5806462}
+      scale: {x: 0.6197033, y: 0.6197034, z: 0.8185754}
+    - name: Cylinder010
+      parentName: Roboty(Clone)
+      position: {x: 0.9133332, y: 2.0206442, z: 0.0023875965}
+      rotation: {x: 0.7071068, y: -0.000000015454308, z: -0.7071067, w: -0.000000015454312}
+      scale: {x: 0.5458366, y: 0.5458366, z: 0.5458366}
+    - name: Cylinder011
+      parentName: Roboty(Clone)
+      position: {x: -0.9027201, y: 3.326529, z: 0.002388517}
+      rotation: {x: 0.000000021855694, y: -0, z: -0, w: 1}
+      scale: {x: -1, y: -1, z: -1}
+    - name: Cylinder012
+      parentName: Roboty(Clone)
+      position: {x: -0.9027286, y: 2.086099, z: 0.0023875965}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: -0.7616999, y: -0.7616999, z: -1}
+    - name: Cylinder013
+      parentName: Roboty(Clone)
+      position: {x: -0.79296416, y: 1.5422629, z: 0.0035770875}
+      rotation: {x: -0.70620555, y: -0.035687245, z: 0.035687253, w: 0.7062058}
+      scale: {x: -0.62002844, y: -0.61970323, z: -0.8181464}
+    - name: Cylinder014
+      parentName: Roboty(Clone)
+      position: {x: -0.9429172, y: 1.5380112, z: 0.0035770875}
+      rotation: {x: -0.70620555, y: 0.035687245, z: -0.035687253, w: 0.7062058}
+      scale: {x: -0.62002844, y: -0.61970323, z: -0.8181464}
+    - name: Cylinder015
+      parentName: Roboty(Clone)
+      position: {x: -1.0397875, y: 1.7204547, z: 0.0035769776}
+      rotation: {x: -0.58064616, y: 0.20309415, z: -0.27692157, w: 0.7381851}
+      scale: {x: -0.6197033, y: -0.61970335, z: -0.8185754}
+    - name: Cylinder016
+      parentName: Roboty(Clone)
+      position: {x: -1.0123675, y: 1.5471069, z: 0.0035770875}
+      rotation: {x: -0.70352286, y: 0.07110166, z: -0.07110167, w: 0.7035231}
+      scale: {x: -0.6210025, y: -0.61970323, z: -0.81686276}
+    - name: Cylinder017
+      parentName: Roboty(Clone)
+      position: {x: -0.9027286, y: 2.0206442, z: 0.0023875965}
+      rotation: {x: 0.7071068, y: 0.000000015454312, z: -0.70710677, w: 0.000000015454312}
+      scale: {x: -0.5458366, y: -0.5458366, z: -0.5458366}
+    - name: Cylinder018
+      parentName: Roboty(Clone)
+      position: {x: -0.87667555, y: 1.5380112, z: 0.0035770875}
+      rotation: {x: 0.7071068, y: 0, z: 0, w: 0.70710677}
+      scale: {x: -0.61970323, y: -0.61970323, z: -0.8185755}
+    - name: Cylinder019
+      parentName: Roboty(Clone)
+      position: {x: -0.9027286, y: 2.7893472, z: 0.0023875965}
+      rotation: {x: -0.000000015454313, y: -0.7071068, z: -0.000000015454313, w: 0.7071068}
+      scale: {x: -0.5458366, y: -0.5458366, z: -0.5458366}
+    - name: Cylinder020
+      parentName: Roboty(Clone)
+      position: {x: 0.41198096, y: 2.1876295, z: 0}
+      rotation: {x: -0.5, y: 0.5, z: -0.5, w: 0.5}
+      scale: {x: 0.47552246, y: 0.47552246, z: 0.8327689}
+    - name: Cylinder021
+      parentName: Roboty(Clone)
+      position: {x: 0.50610834, y: 1.4696876, z: 0}
+      rotation: {x: -0.5, y: -0.5, z: 0.5, w: 0.5}
+      scale: {x: 1, y: 1, z: 1.4484602}
+    - name: Cylinder022
+      parentName: Roboty(Clone)
+      position: {x: 0.50610834, y: 1.1952586, z: -0.22978045}
+      rotation: {x: -0.00000004038406, y: 0.92387956, z: -0.38268346, w: 0.000000016727626}
+      scale: {x: 0.43283358, y: 0.43283358, z: 1.2468941}
+    - name: Cylinder023
+      parentName: Roboty(Clone)
+      position: {x: 0.508, y: 0.70457953, z: -0.14506444}
+      rotation: {x: -0.6532815, y: -0.27059805, z: 0.6532815, w: 0.27059802}
+      scale: {x: 0.77656513, y: 0.57016045, z: 0.6331605}
+    - name: Cylinder024
+      parentName: Roboty(Clone)
+      position: {x: 0.508, y: 0.26981845, z: 0.5147555}
+      rotation: {x: 0.50000006, y: 0.49999997, z: -0.5, w: 0.5}
+      scale: {x: 1.0179996, y: 1.4269859, z: 1.001216}
+    - name: Cylinder026
+      parentName: Roboty(Clone)
+      position: {x: -0.51097405, y: 0.70457953, z: -0.14506444}
+      rotation: {x: -0.6532815, y: -0.27059805, z: 0.6532815, w: 0.27059802}
+      scale: {x: 0.77656513, y: 0.57016045, z: 0.6331605}
+    - name: Cylinder027
+      parentName: Roboty(Clone)
+      position: {x: -0.51286566, y: 1.4696876, z: 0}
+      rotation: {x: -0.5, y: -0.5, z: 0.5, w: 0.5}
+      scale: {x: 1, y: 1, z: 1.4484602}
+    - name: Cylinder028
+      parentName: Roboty(Clone)
+      position: {x: -0.6069931, y: 2.1876295, z: 0}
+      rotation: {x: -0.5, y: 0.5, z: -0.5, w: 0.5}
+      scale: {x: 0.47552246, y: 0.47552246, z: 0.8327689}
+    - name: Cylinder029
+      parentName: Roboty(Clone)
+      position: {x: 0.2630956, y: 4.8562236, z: -0.005211891}
+      rotation: {x: -0.6963643, y: 0.12278781, z: -0.12278781, w: 0.6963643}
+      scale: {x: 0.5586396, y: 0.5586396, z: 0.4959309}
+    - name: Cylinder030
+      parentName: Roboty(Clone)
+      position: {x: -0.2630932, y: 4.8562236, z: -0.005211891}
+      rotation: {x: -0.15304586, y: 0.7010574, z: 0.6903455, w: -0.09229601}
+      scale: {x: 0.5586396, y: 0.5586396, z: 0.4959309}
+    - name: Cylinder031
+      parentName: Roboty(Clone)
+      position: {x: -0.5130499, y: 1.1952586, z: -0.22978045}
+      rotation: {x: -0.00000004038406, y: 0.92387956, z: -0.38268346, w: 0.000000016727626}
+      scale: {x: 0.43283358, y: 0.43283358, z: 1.2468941}
+    - name: Hands
+      parentName: Roboty(Clone)
+      position: {x: 0.9131447, y: 1.7559872, z: 0.0035692898}
+      rotation: {x: 0.000000021855694, y: -0, z: -0, w: 1}
+      scale: {x: 0.7184756, y: 0.6490321, z: 0.6490321}
+    - name: Hands001
+      parentName: Roboty(Clone)
+      position: {x: -0.90254, y: 1.7559872, z: 0.0035692898}
+      rotation: {x: 0.000000021855694, y: -0, z: -0, w: 1}
+      scale: {x: -0.7184756, y: -0.6490321, z: -0.6490321}
+    - name: LegL
+      parentName: Roboty(Clone)
+      position: {x: -0.51097405, y: 0.26981845, z: 0.5147555}
+      rotation: {x: 0.50000006, y: 0.49999997, z: -0.5, w: 0.5}
+      scale: {x: 1.0179996, y: 1.4269859, z: 1.001216}
+    - name: NeckAttach002
+      parentName: Roboty(Clone)
+      position: {x: 0.3954459, y: 3.3021967, z: 0}
+      rotation: {x: -0.5, y: -0.5, z: 0.5, w: 0.5}
+      scale: {x: 0.8807081, y: 0.8807081, z: 1.1755836}
+    - name: NeckAttach003
+      parentName: Roboty(Clone)
+      position: {x: -0, y: 2.715174, z: 0}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: NeckAttach004
+      parentName: Roboty(Clone)
+      position: {x: 0.15590996, y: 2.1876173, z: 0.0000000058378578}
+      rotation: {x: -0.5, y: -0.5, z: 0.5, w: 0.5}
+      scale: {x: 0.72004044, y: 0.72004044, z: 0.8152777}
+    - name: OtherArm
+      parentName: Roboty(Clone)
+      position: {x: -0.3848413, y: 3.3021967, z: 0}
+      rotation: {x: 0.5, y: 0.5, z: -0.5, w: -0.5}
+      scale: {x: -0.8807081, y: -0.8807081, z: -1.1755836}
+    - name: OtherArm001
+      parentName: Roboty(Clone)
+      position: {x: -0.1582541, y: 2.187617, z: 0}
+      rotation: {x: 0.5, y: 0.5, z: -0.5, w: -0.5}
+      scale: {x: -0.72004044, y: -0.72004044, z: -0.8152777}
+    - name: Screen
+      parentName: Roboty(Clone)
+      position: {x: -0, y: 2.5977697, z: 0}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Sphere001
+      parentName: Roboty(Clone)
+      position: {x: 0.6486077, y: 5.9154367, z: -0.005215573}
+      rotation: {x: -0.6963643, y: 0.122787796, z: -0.122787796, w: 0.6963643}
+      scale: {x: 0.70620227, y: 0.70620227, z: 0.70620227}
+    - name: Sphere002
+      parentName: Roboty(Clone)
+      position: {x: -0.64861435, y: 5.9154367, z: -0.005215573}
+      rotation: {x: -0.6963643, y: 0.122787796, z: -0.122787796, w: 0.6963643}
+      scale: {x: 0.70620227, y: 0.70620227, z: 0.70620227}
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 1
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 3
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
